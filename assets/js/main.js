@@ -318,16 +318,14 @@
       <section class="section">
         <a href="#/projects" class="btn back-link">${t.back}</a>
         <div class="card">
-          <div class="grid cols-2 project-detail-layout">
-            <figure class="detail-media media-frame">
-              <img src="${project.cover || placeholderImage}"
-                   alt="${c.title}" decoding="async" />
-            </figure>
-            <div>
-              <h1 class="h2">${c.title}</h1>
-              ${tagsHTML(project.tags)}
-              ${c.body}
-            </div>
+          <figure class="detail-media media-frame">
+            <img src="${project.cover || placeholderImage}"
+                 alt="${c.title}" decoding="async" />
+          </figure>
+          <div class="project-body">
+            <h1 class="h2">${c.title}</h1>
+            ${tagsHTML(project.tags)}
+            ${c.body}
           </div>
         </div>
       </section>
