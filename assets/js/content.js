@@ -15,7 +15,7 @@ const PORTFOLIO = {
     fr: "Mell RIAHI — ENSEEIHT · Sciences du Numérique",
     en: "Mell RIAHI — ENSEEIHT · Digital Sciences",
   },
-  linkedin: "https://www.linkedin.com/in/ton-profil",
+  linkedin: "https://www.linkedin.com/in/mell-riahi",
 
   // Dépose tes PDF dans assets/cv/
   cv: {
