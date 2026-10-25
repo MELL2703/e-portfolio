@@ -1,0 +1,36 @@
+/* Mise en page du CV : une page A4. */
+@page { size: A4; margin: 0; }
+* { box-sizing: border-box; }
+:root { --accent: #0071e3; --text: #1d1d1f; --muted: #6e6e73; --side: #f2f4f8; }
+html, body { margin: 0; }
+body {
+  width: 210mm; height: 297mm;
+  font: 10pt/1.45 -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  color: var(--text);
+  display: grid; grid-template-columns: 66mm 1fr;
+  -webkit-print-color-adjust: exact; print-color-adjust: exact;
+}
+aside { background: var(--side); padding: 14mm 8mm 12mm 10mm; }
+main { padding: 14mm 12mm 12mm 10mm; }
+h1 { margin: 0; font-size: 26pt; line-height: 1.05; letter-spacing: -0.5px; }
+h1 span { color: var(--accent); }
+.role { margin: 4px 0 0; font-size: 12pt; color: var(--muted); }
+h2 {
+  margin: 18px 0 8px; padding-bottom: 3px;
+  font-size: 10.5pt; text-transform: uppercase; letter-spacing: 1.2px;
+  color: var(--accent); border-bottom: 1.5px solid var(--accent);
+}
+aside h2:first-child { margin-top: 0; }
+ul { margin: 0; padding: 0; list-style: none; }
+aside li { margin-bottom: 6px; }
+aside .label { display: block; font-weight: 600; }
+aside .muted, .muted { color: var(--muted); }
+.profile { margin: 14px 0 0; }
+.item { margin-bottom: 11px; }
+.item-head { display: flex; justify-content: space-between; gap: 8px; }
+.item-head strong { font-size: 10.5pt; }
+.date { flex: none; color: var(--accent); font-weight: 600; font-size: 9pt; }
+.where { color: var(--muted); font-style: italic; }
+.item ul { margin-top: 3px; padding-left: 14px; list-style: disc; }
+.bar { height: 5px; margin-top: 3px; border-radius: 3px; background: #d9dee8; }
+.bar i { display: block; height: 100%; border-radius: 3px; background: var(--accent); }
