@@ -10,39 +10,41 @@
  */
 const PORTFOLIO = {
   /* ---------- Identité ---------- */
-  name: "Prénom Nom",
+  name: "Mell RIAHI",
   footer: {
-    fr: "Prénom Nom — École · Filière",
-    en: "Prénom Nom — School · Major",
+    fr: "Mell RIAHI — ENSEEIHT · Sciences du Numérique",
+    en: "Mell RIAHI — ENSEEIHT · Digital Sciences",
   },
   linkedin: "https://www.linkedin.com/in/ton-profil",
 
   // Dépose tes PDF dans assets/cv/
   cv: {
-    fr: { label: "CV (FR)", href: "assets/cv/CV_FR.pdf" },
-    en: { label: "Resume (EN)", href: "assets/cv/CV_EN.pdf" },
+    fr: { label: "CV (FR)", href: "assets/cv/CV_Mell_Riahi_FR.pdf" },
+    en: { label: "Resume (EN)", href: "assets/cv/CV_Mell_Riahi_EN.pdf" },
   },
 
   /* ---------- Accueil ---------- */
   home: {
     fr: {
-      chip: "École · Filière",
+      chip: "ENSEEIHT · Sciences du Numérique",
       intro: `
-        Étudiant(e) en <strong>[année]</strong> à <strong>[école]</strong>,
-        après <strong>[formation précédente]</strong>.
-        Je m'intéresse à <strong>[domaine 1]</strong>, <strong>[domaine 2]</strong>
-        et <strong>[domaine 3]</strong>.
+        Élève ingénieur en <strong>première année</strong> à l'<strong>ENSEEIHT</strong>
+        (département <strong>Sciences du Numérique</strong>), après deux années de
+        <strong>classes préparatoires PCSI / PC*</strong>.
+        Je donne aussi des <strong>cours particuliers</strong> en mathématiques,
+        physique et chimie.
       `,
       pitchTitle: "Elevator pitch",
       pitchIntro: "Découvrez ma vidéo de présentation ci-dessous :",
     },
     en: {
-      chip: "School · Major",
+      chip: "ENSEEIHT · Digital Sciences",
       intro: `
-        <strong>[Year]</strong> student at <strong>[school]</strong>,
-        after <strong>[previous degree]</strong>.
-        I am interested in <strong>[field 1]</strong>, <strong>[field 2]</strong>
-        and <strong>[field 3]</strong>.
+        <strong>First-year</strong> engineering student at <strong>ENSEEIHT</strong>
+        (<strong>Digital Sciences</strong> department), after two years of
+        <strong>preparatory classes PCSI / PC*</strong>.
+        I also work as a <strong>private tutor</strong> in mathematics,
+        physics and chemistry.
       `,
       pitchTitle: "Elevator pitch",
       pitchIntro: "Watch my pitch below:",
@@ -60,19 +62,25 @@ const PORTFOLIO = {
     fr: {
       title: "Parcours académique",
       items: [
-        { title: "École — Filière", subtitle: "20XX–20XX · Année en cours" },
-        { title: "Formation précédente", subtitle: "20XX–20XX" },
-        { title: "Diplôme", subtitle: "20XX–20XX · Spécialité" },
-        { title: "Lycée", subtitle: "20XX–20XX · Bac, spécialités, mention" },
+        { title: "ENSEEIHT — Sciences du Numérique", subtitle: "2026 – auj. · 1re année (actuel)" },
+        { title: "CPGE PC* · Lycée Dumont d'Urville, Toulon", subtitle: "2025–2026" },
+        { title: "CPGE PCSI · Lycée Dumont d'Urville, Toulon", subtitle: "2024–2025" },
+        {
+          title: "Lycée Paul Cézanne · Aix-en-Provence",
+          subtitle: "2021–2024 · Bac général (Maths & Physique-Chimie), mention Bien",
+        },
       ],
     },
     en: {
       title: "Academic pathway",
       items: [
-        { title: "School — Major", subtitle: "20XX–20XX · Current year" },
-        { title: "Previous program", subtitle: "20XX–20XX" },
-        { title: "Degree", subtitle: "20XX–20XX · Specialty" },
-        { title: "High school", subtitle: "20XX–20XX · Baccalauréat, honors" },
+        { title: "ENSEEIHT — Digital Sciences", subtitle: "2026 – present · Year 1 (current)" },
+        { title: "Preparatory class PC* · Lycée Dumont d'Urville, Toulon", subtitle: "2025–2026" },
+        { title: "Preparatory class PCSI · Lycée Dumont d'Urville, Toulon", subtitle: "2024–2025" },
+        {
+          title: "Lycée Paul Cézanne · Aix-en-Provence",
+          subtitle: "2021–2024 · French Baccalauréat (Maths & Physics-Chemistry), with honors",
+        },
       ],
     },
   },
@@ -215,12 +223,12 @@ const PORTFOLIO = {
       fr: {
         nav: "Sports",
         title: "Sports & autres activités",
-        body: `<p>Sport 1, sport 2, musique... Soft skills : ...</p>`,
+        body: `<p><strong>Water-polo</strong> pendant 10 ans, passionné par tout ce qui touche au sport, et <strong>musique</strong>. Langues : français (C2), espagnol (C1+), anglais (B2+).</p>`,
       },
       en: {
         nav: "Sports",
         title: "Sports & activities",
-        body: `<p>Sport 1, sport 2, music... Soft skills: ...</p>`,
+        body: `<p><strong>Water polo</strong> for 10 years, passionate about all sports, and <strong>music</strong>. Languages: French (C2), Spanish (C1+), English (B2+).</p>`,
       },
     },
   ],
