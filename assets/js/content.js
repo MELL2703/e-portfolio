@@ -270,33 +270,46 @@ const PORTFOLIO = {
       },
     },
     {
-      slug: "projet-2",
-      cover: "",
-      tags: [],
+      slug: "stopeat",
+      cover: "assets/img/projects/stopeat/cover.svg",
+      tags: ["💡 En réflexion", "Entrepreneuriat", "Nutrition", "Marque"],
       fr: {
-        title: "Titre du projet 2",
-        summary: "Résumé en une phrase.",
-        body: `<p>Description détaillée du projet...</p>`,
+        title: "Stop'Eat — Projet de marque",
+        summary:
+          "Idée de marque de sachets très peu caloriques à diluer dans l'eau, pour aider à mieux gérer la faim.",
+        body: `
+          <p>
+            <strong>Projet personnel en réflexion.</strong> Stop'Eat (jeu de mots
+            avec « stop it ») serait une marque destinée aux personnes qui
+            souhaitent perdre du poids, par envie ou pour leur santé.
+          </p>
+          <p><strong>Le concept :</strong></p>
+          <ul>
+            <li>De petits sachets <strong>très peu caloriques</strong></li>
+            <li>À <strong>mélanger avec de l'eau</strong></li>
+            <li>Pensés pour aider à <strong>réduire la sensation de faim</strong> entre les repas</li>
+          </ul>
+          <p class="small">Statut : idée en cours de réflexion — cette page sera mise à jour au fil du projet.</p>
+        `,
       },
       en: {
-        title: "Project 2 title",
-        summary: "One-sentence summary.",
-        body: `<p>Detailed project description...</p>`,
-      },
-    },
-    {
-      slug: "projet-3",
-      cover: "",
-      tags: [],
-      fr: {
-        title: "Titre du projet 3",
-        summary: "Résumé en une phrase.",
-        body: `<p>Description détaillée du projet...</p>`,
-      },
-      en: {
-        title: "Project 3 title",
-        summary: "One-sentence summary.",
-        body: `<p>Detailed project description...</p>`,
+        title: "Stop'Eat — Brand project",
+        summary:
+          "Idea for a brand of very low-calorie sachets mixed with water, to help manage hunger.",
+        body: `
+          <p>
+            <strong>Personal project, at the idea stage.</strong> Stop'Eat (a pun on
+            “stop it”) would be a brand for people who want to lose weight, by
+            choice or for health reasons.
+          </p>
+          <p><strong>The concept:</strong></p>
+          <ul>
+            <li>Small, <strong>very low-calorie</strong> sachets</li>
+            <li>To be <strong>mixed with water</strong></li>
+            <li>Designed to help <strong>reduce hunger</strong> between meals</li>
+          </ul>
+          <p class="small">Status: early-stage idea — this page will be updated as the project evolves.</p>
+        `,
       },
     },
   ],
