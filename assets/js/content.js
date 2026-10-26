@@ -270,33 +270,46 @@ const PORTFOLIO = {
       },
     },
     {
-      slug: "projet-2",
-      cover: "",
-      tags: [],
+      slug: "stopeat",
+      cover: "assets/img/projects/stopeat/cover.svg",
+      tags: ["💡 En réflexion", "Entrepreneuriat", "Nutrition", "Marque"],
       fr: {
-        title: "Titre du projet 2",
-        summary: "Résumé en une phrase.",
-        body: `<p>Description détaillée du projet...</p>`,
+        title: "Stop'Eat — Projet de marque",
+        summary:
+          "Idée de marque de sachets très peu caloriques à diluer dans l'eau, pour aider à mieux gérer la faim.",
+        body: `
+          <p>
+            <strong>Projet personnel en réflexion.</strong> Stop'Eat (jeu de mots
+            avec « stop it ») serait une marque destinée aux personnes qui
+            souhaitent perdre du poids, par envie ou pour leur santé.
+          </p>
+          <p><strong>Le concept :</strong></p>
+          <ul>
+            <li>De petits sachets <strong>très peu caloriques</strong></li>
+            <li>À <strong>mélanger avec de l'eau</strong></li>
+            <li>Pensés pour aider à <strong>réduire la sensation de faim</strong> entre les repas</li>
+          </ul>
+          <p class="small">Statut : idée en cours de réflexion — cette page sera mise à jour au fil du projet.</p>
+        `,
       },
       en: {
-        title: "Project 2 title",
-        summary: "One-sentence summary.",
-        body: `<p>Detailed project description...</p>`,
-      },
-    },
-    {
-      slug: "projet-3",
-      cover: "",
-      tags: [],
-      fr: {
-        title: "Titre du projet 3",
-        summary: "Résumé en une phrase.",
-        body: `<p>Description détaillée du projet...</p>`,
-      },
-      en: {
-        title: "Project 3 title",
-        summary: "One-sentence summary.",
-        body: `<p>Detailed project description...</p>`,
+        title: "Stop'Eat — Brand project",
+        summary:
+          "Idea for a brand of very low-calorie sachets mixed with water, to help manage hunger.",
+        body: `
+          <p>
+            <strong>Personal project, at the idea stage.</strong> Stop'Eat (a pun on
+            “stop it”) would be a brand for people who want to lose weight, by
+            choice or for health reasons.
+          </p>
+          <p><strong>The concept:</strong></p>
+          <ul>
+            <li>Small, <strong>very low-calorie</strong> sachets</li>
+            <li>To be <strong>mixed with water</strong></li>
+            <li>Designed to help <strong>reduce hunger</strong> between meals</li>
+          </ul>
+          <p class="small">Status: early-stage idea — this page will be updated as the project evolves.</p>
+        `,
       },
     },
   ],
@@ -313,12 +326,46 @@ const PORTFOLIO = {
       fr: {
         nav: "Mobilité",
         title: "Mobilité internationale",
-        body: `<p>Objectifs, destinations envisagées, motivations...</p>`,
+        body: `
+          <p>
+            Ma famille est originaire du <strong>Pérou</strong> : j'ai grandi avec
+            l'espagnol, que je parle notamment avec ma grand-mère. Cette double
+            culture me donne envie de poursuivre mon parcours à l'international.
+            Pour mon stage, deux destinations m'attirent :
+          </p>
+        `,
+        subcards: [
+          {
+            title: "🇯🇵 Japon — création de jeux vidéo",
+            body: `<p>Découvrir de l'intérieur l'industrie du jeu vidéo japonaise et participer à la création de jeux.</p>`,
+          },
+          {
+            title: "🇺🇸 États-Unis — anglais & entrepreneuriat",
+            body: `<p>Perfectionner mon anglais et apprendre au contact de l'écosystème entrepreneurial américain, pour un jour créer ma propre entreprise.</p>`,
+          },
+        ],
       },
       en: {
         nav: "Mobility",
         title: "International mobility",
-        body: `<p>Goals, target destinations, motivations...</p>`,
+        body: `
+          <p>
+            My family comes from <strong>Peru</strong>: I grew up with Spanish,
+            which I speak with my grandmother. This dual culture makes me want to
+            continue my studies internationally. For my internship, two
+            destinations appeal to me:
+          </p>
+        `,
+        subcards: [
+          {
+            title: "🇯🇵 Japan — video game development",
+            body: `<p>Discover the Japanese video game industry from the inside and take part in creating games.</p>`,
+          },
+          {
+            title: "🇺🇸 United States — English & entrepreneurship",
+            body: `<p>Improve my English and learn from the American startup ecosystem, with the goal of one day creating my own business.</p>`,
+          },
+        ],
       },
     },
     {
@@ -326,22 +373,66 @@ const PORTFOLIO = {
       fr: {
         nav: "Engagement",
         title: "Engagement",
-        body: `<p><strong>Association</strong> — depuis 20XX. Valeurs : ...</p>`,
+        body: `
+          <p>
+            <strong>Bureau des élèves (BDE) de l'ENSEEIHT</strong> — en première
+            année, je fais partie d'une liste candidate pour reprendre le BDE
+            l'année prochaine : organisation d'événements, vie étudiante et
+            travail en équipe.
+          </p>
+        `,
+      },
+      en: {
+        nav: "Civic",
+        title: "Student life",
+        body: `
+          <p>
+            <strong>ENSEEIHT Student Union (BDE)</strong> — as a first-year
+            student, I am part of a team running to lead the student union next
+            year: event organisation, student life and teamwork.
+          </p>
+        `,
+      },
+    },
+    {
+      id: "teaching",
+      fr: {
+        nav: "Transmission",
+        title: "Transmission",
+        body: `
+          <p>
+            J'aime expliquer et faire progresser les autres : je donne des cours
+            particuliers en <strong>mathématiques, physique et chimie</strong>.
+          </p>
+        `,
         subcards: [
           {
-            title: "Expérience marquante — été 20XX",
-            body: `<p>Raconte ici une expérience (lien vidéo, photos...).</p>`,
+            title: "Complétude — depuis septembre 2026",
+            body: `<p>Professeur particulier pour des élèves de collège, de lycée et de l'enseignement supérieur.</p>`,
+          },
+          {
+            title: "Cours en famille — depuis 2024",
+            body: `<p>Soutien scolaire pour des lycéens de ma famille.</p>`,
           },
         ],
       },
       en: {
-        nav: "Civic",
-        title: "Civic engagement",
-        body: `<p><strong>Organization</strong> — since 20XX. Values: ...</p>`,
+        nav: "Teaching",
+        title: "Teaching",
+        body: `
+          <p>
+            I enjoy explaining and helping others improve: I give private
+            lessons in <strong>mathematics, physics and chemistry</strong>.
+          </p>
+        `,
         subcards: [
           {
-            title: "Highlight — Summer 20XX",
-            body: `<p>Describe an experience here (video link, photos...).</p>`,
+            title: "Complétude — since September 2026",
+            body: `<p>Private tutor for middle school, high school and university students.</p>`,
+          },
+          {
+            title: "Family tutoring — since 2024",
+            body: `<p>Academic support for high school students in my family.</p>`,
           },
         ],
       },
@@ -351,12 +442,12 @@ const PORTFOLIO = {
       fr: {
         nav: "Sports",
         title: "Sports & autres activités",
-        body: `<p><strong>Water-polo</strong> pendant 10 ans, passionné par tout ce qui touche au sport, et <strong>musique</strong>. Langues : français (C2), espagnol (C1+), anglais (B2+).</p>`,
+        body: `<p><strong>Water-polo</strong> pendant 10 ans, passionné par tout ce qui touche au sport, et <strong>musique</strong>. Langues : français (C2), espagnol (C1), anglais (B2+).</p>`,
       },
       en: {
         nav: "Sports",
         title: "Sports & activities",
-        body: `<p><strong>Water polo</strong> for 10 years, passionate about all sports, and <strong>music</strong>. Languages: French (C2), Spanish (C1+), English (B2+).</p>`,
+        body: `<p><strong>Water polo</strong> for 10 years, passionate about all sports, and <strong>music</strong>. Languages: French (C2), Spanish (C1), English (B2+).</p>`,
       },
     },
   ],
