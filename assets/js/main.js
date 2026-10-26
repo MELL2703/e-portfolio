@@ -389,29 +389,44 @@
   }
 
   function enableScrollSpy() {
-    if (!("IntersectionObserver" in window)) return;
-
     const sections = ["home", ...sectionIds]
       .map((id) => document.getElementById(id))
       .filter(Boolean);
     const headerHeight = $("header.nav")?.offsetHeight || 0;
+    let frame = null;
 
-    spyObserver = new IntersectionObserver(
-      (entries) => {
-        const visible = entries
-          .filter((entry) => entry.isIntersecting)
-          .sort((a, b) => a.boundingClientRect.top - b.boundingClientRect.top);
+    // Section active : la dernière dont le haut est passé sous le menu,
+    // ou la dernière de la page quand on est tout en bas.
+    function update() {
+      frame = null;
+      const atBottom =
+        window.innerHeight + window.scrollY >=
+        document.documentElement.scrollHeight - 2;
+      let current = sections[0];
 
-        if (visible.length > 0) {
-          setActive(visible[0].target.id);
-        }
+      if (atBottom) {
+        current = sections[sections.length - 1];
+      } else {
+        sections.forEach((section) => {
+          if (section.getBoundingClientRect().top <= headerHeight + 24) {
+            current = section;
+          }
+        });
+      }
+      if (current) setActive(current.id);
+    }
+
+    function onScroll() {
+      if (frame === null) frame = requestAnimationFrame(update);
+    }
+
+    window.addEventListener("scroll", onScroll, { passive: true });
+    spyObserver = {
+      disconnect() {
+        window.removeEventListener("scroll", onScroll);
+        if (frame !== null) cancelAnimationFrame(frame);
       },
-      {
-        threshold: 0,
-        rootMargin: `-${headerHeight}px 0px -45% 0px`,
-      },
-    );
-    sections.forEach((section) => spyObserver.observe(section));
+    };
   }
 
   /* Rendu et routage. */
