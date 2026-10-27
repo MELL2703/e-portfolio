@@ -665,3 +665,46 @@ footer {
 .subcard .h2 {
   font-size: 18px;
 }
+
+/* Photo de profil et encarts en grille. */
+.hero-id {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.avatar {
+  flex: 0 0 auto;
+  width: 96px;
+  height: 96px;
+  border: 1px solid var(--card-border);
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.avatar-initials {
+  display: grid;
+  place-items: center;
+  background: linear-gradient(145deg, #7c5cff, #22d3ee);
+  color: #fff;
+  font-size: 32px;
+  font-weight: 700;
+}
+
+.subgrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 14px;
+  margin-top: 14px;
+}
+
+.subgrid .subcard {
+  margin-top: 0;
+}
+
+.btn-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 12px 0 4px;
+}
