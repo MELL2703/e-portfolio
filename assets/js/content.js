@@ -356,15 +356,15 @@ const PORTFOLIO = {
         subcards: [
           {
             title: "🇯🇵 Japon — jeu vidéo",
-            body: `<p>Stage dans un studio de jeux vidéo, pour voir comment on conçoit un jeu de l'intérieur.</p><p class="small">Lié au modèle n°1.</p>`,
+            body: `<p>Stage dans un studio de jeux vidéo, pour voir comment on conçoit un jeu de l'intérieur. Comme Jean Muller, je veux transformer une passion en métier.</p><p class="small">Lié au modèle n°2.</p>`,
           },
           {
             title: "🇺🇸 États-Unis — entrepreneuriat",
-            body: `<p>Stage dans une start-up, pour progresser en anglais et apprendre à lancer un produit, avant de créer ma propre entreprise.</p><p class="small">Lié au modèle n°2.</p>`,
+            body: `<p>Stage dans une start-up, pour progresser en anglais et apprendre à lancer et financer un produit, comme Jean-Emmanuel Faure avec Water Horizon.</p><p class="small">Lié au modèle n°1.</p>`,
           },
           {
-            title: "🌎 Projet n°3 — à préciser",
-            body: `<p>À compléter.</p><p class="small">Lié au modèle n°3.</p>`,
+            title: "🇵🇪 Pérou — entrepreneuriat à impact",
+            body: `<p>Stage ou semestre à Lima, en espagnol, dans une entreprise à impact social. Comme Raymond Sarr au Sénégal, je veux m'appuyer sur mes racines pour entreprendre utilement.</p><p class="small">Lié au modèle n°3.</p>`,
           },
         ],
       },
@@ -382,15 +382,15 @@ const PORTFOLIO = {
         subcards: [
           {
             title: "🇯🇵 Japan — video games",
-            body: `<p>An internship in a game studio, to see how games are designed and built from the inside.</p><p class="small">Linked to role model #1.</p>`,
+            body: `<p>An internship in a game studio, to see how games are designed and built from the inside. Like Jean Muller, I want to turn a passion into a job.</p><p class="small">Linked to role model #2.</p>`,
           },
           {
             title: "🇺🇸 United States — entrepreneurship",
-            body: `<p>An internship in a start-up, to improve my English and learn how to launch a product before starting my own business.</p><p class="small">Linked to role model #2.</p>`,
+            body: `<p>An internship in a start-up, to improve my English and learn how to launch and fund a product, the way Jean-Emmanuel Faure did with Water Horizon.</p><p class="small">Linked to role model #1.</p>`,
           },
           {
-            title: "🌎 Project #3 — to be defined",
-            body: `<p>To be completed.</p><p class="small">Linked to role model #3.</p>`,
+            title: "🇵🇪 Peru — impact entrepreneurship",
+            body: `<p>An internship or semester in Lima, in Spanish, with a social-impact company. Like Raymond Sarr in Senegal, I want to build on my roots to start something useful.</p><p class="small">Linked to role model #3.</p>`,
           },
         ],
       },
@@ -477,16 +477,16 @@ const PORTFOLIO = {
         `,
         subcards: [
           {
-            title: "Modèle n°1 — à compléter",
-            body: `<p>Nom, poste, entreprise, parcours. Ce que j'en retiens.</p><p class="small">→ Projet de mobilité : Japon.</p>`,
+            title: "Modèle n°1 — Jean-Emmanuel Faure",
+            body: `<p><strong>Fondateur de <a href="https://www.edf.fr/water-horizon-batterie-mobile-valorise-chaleur-perdue" target="_blank" rel="noopener">Water Horizon</a></strong> (Toulouse, 2017). Diplômé N7 en mécanique des fluides (2015).</p><p>Sa start-up fabrique des batteries thermiques mobiles qui récupèrent la chaleur perdue des usines. L'idée lui est venue en visitant une usine pendant ses études. Premiers prototypes faits chez lui, puis 18 M€ levés en 2025.</p><p><strong>Ce que j'en retiens :</strong> une idée d'ingénieur peut devenir une entreprise, à condition de prototyper vite et de s'entourer.</p><p class="small">→ Mobilité : États-Unis.</p>`,
           },
           {
-            title: "Modèle n°2 — à compléter",
-            body: `<p>Nom, poste, entreprise, parcours. Ce que j'en retiens.</p><p class="small">→ Projet de mobilité : États-Unis.</p>`,
+            title: "Modèle n°2 — Jean Muller",
+            body: `<p><strong>Fondateur de PassPassion</strong> (Toulouse, 2020). Diplômé N7 en électronique (1990).</p><p>Après une vingtaine d'années dans le secteur spatial, il crée à 52 ans une entreprise qui fait découvrir des métiers-passions à travers des stages : plus de 500 stages organisés en 2023.</p><p><strong>Ce que j'en retiens :</strong> il n'est jamais trop tard pour transformer une passion en projet.</p><p class="small">→ Mobilité : Japon.</p>`,
           },
           {
-            title: "Modèle n°3 — à compléter",
-            body: `<p>Nom, poste, entreprise, parcours. Ce que j'en retiens.</p><p class="small">→ Projet de mobilité n°3.</p>`,
+            title: "Modèle n°3 — Raymond Sarr",
+            body: `<p><strong>Fondateur de <a href="https://www.mondedesgrandesecoles.fr/jokosun-la-startup-qui-rend-lenergie-solaire-accessible-a-tous/" target="_blank" rel="noopener">Jokosun</a></strong> (2017). Ingénieur INP-ENSEEIHT.</p><p>Inspiré par ses racines sénégalaises, il a créé une entreprise qui apporte l'énergie solaire aux zones rurales du Sénégal : plus de 3 000 personnes ont eu accès à l'électricité.</p><p><strong>Ce que j'en retiens :</strong> ses origines peuvent devenir une force pour entreprendre. Ça me parle, avec ma famille péruvienne.</p><p class="small">→ Mobilité : Pérou.</p>`,
           },
           {
             title: "Expérience",
@@ -512,16 +512,16 @@ const PORTFOLIO = {
         `,
         subcards: [
           {
-            title: "Role model #1 — to be completed",
-            body: `<p>Name, job, company, background. What I take from their path.</p><p class="small">→ Mobility project: Japan.</p>`,
+            title: "Role model #1 — Jean-Emmanuel Faure",
+            body: `<p><strong>Founder of <a href="https://www.edf.fr/en/water-horizon-mobile-battery-recovers-waste-heat" target="_blank" rel="noopener">Water Horizon</a></strong> (Toulouse, 2017). ENSEEIHT graduate in fluid mechanics (2015).</p><p>His start-up builds mobile thermal batteries that recover waste heat from factories. The idea came from a factory visit during his studies. He built the first prototypes at home and raised €18M in 2025.</p><p><strong>What I take from him:</strong> an engineering idea can become a company if you prototype fast and build the right team.</p><p class="small">→ Mobility: United States.</p>`,
           },
           {
-            title: "Role model #2 — to be completed",
-            body: `<p>Name, job, company, background. What I take from their path.</p><p class="small">→ Mobility project: United States.</p>`,
+            title: "Role model #2 — Jean Muller",
+            body: `<p><strong>Founder of PassPassion</strong> (Toulouse, 2020). ENSEEIHT graduate in electronics (1990).</p><p>After about twenty years in the space industry, he started a company at 52 that lets people try out "passion" jobs through short placements: over 500 placements organised in 2023.</p><p><strong>What I take from him:</strong> it's never too late to turn a passion into a business.</p><p class="small">→ Mobility: Japan.</p>`,
           },
           {
-            title: "Role model #3 — to be completed",
-            body: `<p>Name, job, company, background. What I take from their path.</p><p class="small">→ Mobility project #3.</p>`,
+            title: "Role model #3 — Raymond Sarr",
+            body: `<p><strong>Founder of <a href="https://www.mondedesgrandesecoles.fr/jokosun-la-startup-qui-rend-lenergie-solaire-accessible-a-tous/" target="_blank" rel="noopener">Jokosun</a></strong> (2017). INP-ENSEEIHT engineer.</p><p>Driven by his Senegalese roots, he created a company that brings solar power to rural areas of Senegal: more than 3,000 people have gained access to electricity.</p><p><strong>What I take from him:</strong> your roots can become a strength when you start a business. That speaks to me, with my Peruvian family.</p><p class="small">→ Mobility: Peru.</p>`,
           },
           {
             title: "Experience",
