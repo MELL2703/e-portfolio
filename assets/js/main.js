@@ -94,11 +94,8 @@
   }
 
   let currentLang = readPreference("lang");
-  if (currentLang !== "fr" && currentLang !== "en") {
-    currentLang = (navigator.language || "fr").toLowerCase().startsWith("fr")
-      ? "fr"
-      : "en";
-  }
+  // Anglais par défaut : les livrables du portfolio sont évalués en anglais.
+  if (currentLang !== "fr" && currentLang !== "en") currentLang = "en";
 
   root.dataset.theme = readPreference("theme") === "dark" ? "dark" : "light";
 
@@ -137,7 +134,7 @@
     const t = i18n[lang];
 
     $("#nav-home").textContent = t.home;
-    $("#nav-projects").textContent = t.projects;
+    $("#nav-projects").textContent = P.projectsIntro[lang].nav;
     P.sections.forEach((section) => {
       $("#nav-" + section.id).textContent = section[lang].nav;
     });
@@ -213,7 +210,7 @@
         <div class="card fade">
           <h2 class="h2">${c.title}</h2>
           ${c.body}
-          ${subcards}
+          ${subcards ? `<div class="subgrid">${subcards}</div>` : ""}
         </div>
       </section>
     `;
@@ -234,6 +231,19 @@
     `;
   }
 
+  function photoHTML() {
+    if (P.photo) {
+      return `<img class="avatar" src="${P.photo}" alt="${P.name}" />`;
+    }
+    const initials = P.name
+      .split(/\s+/)
+      .map((part) => part[0])
+      .join("")
+      .slice(0, 2)
+      .toUpperCase();
+    return `<div class="avatar avatar-initials" aria-hidden="true">${initials}</div>`;
+  }
+
   function renderHomeHTML(lang) {
     const c = P.home[lang];
 
@@ -241,8 +251,13 @@
       <section id="home" class="section hero">
         <div class="grid cols-2">
           <div class="card fade">
-            <span class="chip">${c.chip}</span>
-            <h1>${P.name}</h1>
+            <div class="hero-id">
+              ${photoHTML()}
+              <div>
+                <span class="chip">${c.chip}</span>
+                <h1>${P.name}</h1>
+              </div>
+            </div>
             <p class="lead">${c.intro}</p>
             <div class="grid cols-3 hero-actions">
               <a class="btn${lang === "fr" ? " primary" : ""}"
@@ -260,7 +275,6 @@
           </div>
         </div>
       </section>
-      ${timelineHTML(lang)}
       ${projectsIntroHTML(lang)}
       ${P.sections.map((section) => sectionHTML(section, lang)).join("")}
     `;
@@ -299,14 +313,27 @@
       })
       .join("");
 
+    const intro = P.projectsIntro[lang];
+    const courses = P.courses[lang];
+
     return `
       <section class="section">
         <div class="card">
-          <h1 class="h2">${t.projects}</h1>
-          <p class="small">${P.projectsIntro[lang].pageLead}</p>
+          <h1 class="h2">${intro.title}</h1>
+          <p class="small">${intro.pageLead}</p>
         </div>
       </section>
-      <section class="section project-list">${items}</section>
+      ${timelineHTML(lang)}
+      <section class="section">
+        <div class="card fade">
+          <h2 class="h2">${courses.title}</h2>
+          ${courses.body}
+        </div>
+      </section>
+      <section class="section">
+        <h2 class="h2">${intro.projectsTitle}</h2>
+        <div class="project-list">${items}</div>
+      </section>
     `;
   }
 
@@ -461,10 +488,8 @@
       renderFrame = null;
       $$(".fade", app).forEach((element) => element.classList.add("show"));
 
-      if (isHome) {
-        enableTimeline();
-        enableScrollSpy();
-      }
+      enableTimeline();
+      if (isHome) enableScrollSpy();
 
       if (isHome && sectionIds.includes(hash)) {
         scrollToSection(hash);

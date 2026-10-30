@@ -17,10 +17,13 @@ const PORTFOLIO = {
   },
   linkedin: "https://www.linkedin.com/in/mell-riahi",
 
+  // Ta photo (carrée de préférence), ex. "assets/img/photo.jpg" — "" = initiales
+  photo: "",
+
   // Dépose tes PDF dans assets/cv/
   cv: {
     fr: { label: "CV (FR)", href: "assets/cv/CV_Mell_Riahi_FR.pdf" },
-    en: { label: "Resume (EN)", href: "assets/cv/CV_Mell_Riahi_EN.pdf" },
+    en: { label: "CV (EN)", href: "assets/cv/CV_Mell_Riahi_EN.pdf" },
   },
 
   /* ---------- Accueil ---------- */
@@ -28,26 +31,26 @@ const PORTFOLIO = {
     fr: {
       chip: "ENSEEIHT · Sciences du Numérique",
       intro: `
-        Élève ingénieur en <strong>première année</strong> à l'<strong>ENSEEIHT</strong>
-        (département <strong>Sciences du Numérique</strong>), après deux années de
-        <strong>classes préparatoires PCSI / PC*</strong>.
-        Je donne aussi des <strong>cours particuliers</strong> en mathématiques,
-        physique et chimie.
+        Élève ingénieur en <strong>1<sup>re</sup> année</strong> à l'<strong>ENSEEIHT</strong>
+        (département <strong>Sciences du Numérique</strong>), après deux ans de
+        <strong>prépa PCSI / PC*</strong>. Je m'intéresse à la
+        <strong>création de jeux vidéo</strong> et à l'<strong>entrepreneuriat</strong>,
+        et je donne des cours particuliers en maths, physique et chimie.
       `,
       pitchTitle: "Elevator pitch",
-      pitchIntro: "Découvrez ma vidéo de présentation ci-dessous :",
+      pitchIntro: "Ma présentation en 2-3 minutes (en anglais) :",
     },
     en: {
       chip: "ENSEEIHT · Digital Sciences",
       intro: `
-        <strong>First-year</strong> engineering student at <strong>ENSEEIHT</strong>
+        I'm a <strong>first-year engineering student</strong> at <strong>ENSEEIHT</strong>
         (<strong>Digital Sciences</strong> department), after two years of
-        <strong>preparatory classes PCSI / PC*</strong>.
-        I also work as a <strong>private tutor</strong> in mathematics,
-        physics and chemistry.
+        <strong>preparatory classes (PCSI / PC*)</strong>. I'm interested in
+        <strong>video game development</strong> and <strong>entrepreneurship</strong>,
+        and I tutor maths, physics and chemistry.
       `,
       pitchTitle: "Elevator pitch",
-      pitchIntro: "Watch my pitch below:",
+      pitchIntro: "My 2–3 minute career story:",
     },
   },
 
@@ -85,19 +88,35 @@ const PORTFOLIO = {
     },
   },
 
-  /* ---------- Encart "Mes projets" sur l'accueil ---------- */
+  /* ---------- Onglet "Parcours ingénieur" (page projets) ---------- */
   projectsIntro: {
     fr: {
-      title: "Mes projets",
-      lead: "Sélection de projets et meilleures productions.",
-      link: "Ouvrir la page dédiée",
-      pageLead: "Page dédiée aux projets et meilleures productions.",
+      nav: "Formation",
+      title: "Parcours ingénieur",
+      lead: "Mon parcours, ma formation à l'ENSEEIHT et mes projets.",
+      link: "Voir mon parcours et mes projets",
+      pageLead: "Formation, cours suivis et projets marquants.",
+      projectsTitle: "Projets",
     },
     en: {
-      title: "My projects",
-      lead: "Selection of projects and key deliverables.",
-      link: "Open the dedicated page",
-      pageLead: "Dedicated page for projects & deliverables.",
+      nav: "Engineering",
+      title: "Engineering course",
+      lead: "My academic path, my studies at ENSEEIHT and my projects.",
+      link: "See my path and projects",
+      pageLead: "Education, courses and key projects.",
+      projectsTitle: "Projects",
+    },
+  },
+
+  // Cours de l'année en cours (affichés sur la page "Parcours ingénieur")
+  courses: {
+    fr: {
+      title: "ENSEEIHT — Sciences du Numérique (1<sup>re</sup> année)",
+      body: `<p>Programmation (Python, Ada), mathématiques et informatique fondamentale.</p>`,
+    },
+    en: {
+      title: "ENSEEIHT — Digital Sciences (Year 1)",
+      body: `<p>Programming (Python, Ada), mathematics and computer science fundamentals.</p>`,
     },
   },
 
@@ -328,20 +347,24 @@ const PORTFOLIO = {
         title: "Mobilité internationale",
         body: `
           <p>
-            Ma famille est originaire du <strong>Pérou</strong> : j'ai grandi avec
-            l'espagnol, que je parle notamment avec ma grand-mère. Cette double
-            culture me donne envie de poursuivre mon parcours à l'international.
-            Pour mon stage, deux destinations m'attirent :
+            Ma famille vient du <strong>Pérou</strong> : j'ai grandi avec l'espagnol,
+            que je parle avec ma grand-mère. Partir à l'étranger fait partie de mon
+            projet. Voici trois projets de mobilité, chacun lié à un de mes
+            <a href="#career">modèles professionnels</a> :
           </p>
         `,
         subcards: [
           {
-            title: "🇯🇵 Japon — création de jeux vidéo",
-            body: `<p>Découvrir de l'intérieur l'industrie du jeu vidéo japonaise et participer à la création de jeux.</p>`,
+            title: "🇯🇵 Japon — jeu vidéo",
+            body: `<p>Stage dans un studio de jeux vidéo, pour voir comment on conçoit un jeu de l'intérieur. Comme Jean Muller, je veux transformer une passion en métier.</p><p class="small">Lié au modèle n°2.</p>`,
           },
           {
-            title: "🇺🇸 États-Unis — anglais & entrepreneuriat",
-            body: `<p>Perfectionner mon anglais et apprendre au contact de l'écosystème entrepreneurial américain, pour un jour créer ma propre entreprise.</p>`,
+            title: "🇺🇸 États-Unis — entrepreneuriat",
+            body: `<p>Stage dans une start-up, pour progresser en anglais et apprendre à lancer et financer un produit, comme Jean-Emmanuel Faure avec Water Horizon.</p><p class="small">Lié au modèle n°1.</p>`,
+          },
+          {
+            title: "🇵🇪 Pérou — entrepreneuriat à impact",
+            body: `<p>Stage ou semestre à Lima, en espagnol, dans une entreprise à impact social. Comme Raymond Sarr au Sénégal, je veux m'appuyer sur mes racines pour entreprendre utilement.</p><p class="small">Lié au modèle n°3.</p>`,
           },
         ],
       },
@@ -350,20 +373,24 @@ const PORTFOLIO = {
         title: "International mobility",
         body: `
           <p>
-            My family comes from <strong>Peru</strong>: I grew up with Spanish,
-            which I speak with my grandmother. This dual culture makes me want to
-            continue my studies internationally. For my internship, two
-            destinations appeal to me:
+            My family comes from <strong>Peru</strong>: I grew up speaking Spanish,
+            which I still speak with my grandmother. Going abroad is part of my
+            plan. Here are three mobility projects, each linked to one of my
+            <a href="#career">role models</a>:
           </p>
         `,
         subcards: [
           {
-            title: "🇯🇵 Japan — video game development",
-            body: `<p>Discover the Japanese video game industry from the inside and take part in creating games.</p>`,
+            title: "🇯🇵 Japan — video games",
+            body: `<p>An internship in a game studio, to see how games are designed and built from the inside. Like Jean Muller, I want to turn a passion into a job.</p><p class="small">Linked to role model #2.</p>`,
           },
           {
-            title: "🇺🇸 United States — English & entrepreneurship",
-            body: `<p>Improve my English and learn from the American startup ecosystem, with the goal of one day creating my own business.</p>`,
+            title: "🇺🇸 United States — entrepreneurship",
+            body: `<p>An internship in a start-up, to improve my English and learn how to launch and fund a product, the way Jean-Emmanuel Faure did with Water Horizon.</p><p class="small">Linked to role model #1.</p>`,
+          },
+          {
+            title: "🇵🇪 Peru — impact entrepreneurship",
+            body: `<p>An internship or semester in Lima, in Spanish, with a social-impact company. Like Raymond Sarr in Senegal, I want to build on my roots to start something useful.</p><p class="small">Linked to role model #3.</p>`,
           },
         ],
       },
@@ -372,67 +399,47 @@ const PORTFOLIO = {
       id: "civic",
       fr: {
         nav: "Engagement",
-        title: "Engagement",
-        body: `
-          <p>
-            <strong>Bureau des élèves (BDE) de l'ENSEEIHT</strong> — en première
-            année, je fais partie d'une liste candidate pour reprendre le BDE
-            l'année prochaine : organisation d'événements, vie étudiante et
-            travail en équipe.
-          </p>
-        `,
-      },
-      en: {
-        nav: "Civic",
-        title: "Student life",
-        body: `
-          <p>
-            <strong>ENSEEIHT Student Union (BDE)</strong> — as a first-year
-            student, I am part of a team running to lead the student union next
-            year: event organisation, student life and teamwork.
-          </p>
-        `,
-      },
-    },
-    {
-      id: "teaching",
-      fr: {
-        nav: "Transmission",
-        title: "Transmission",
-        body: `
-          <p>
-            J'aime expliquer et faire progresser les autres : je donne des cours
-            particuliers en <strong>mathématiques, physique et chimie</strong>.
-          </p>
-        `,
+        title: "Développement durable & engagement",
+        body: `<p>Mes engagements et ce que j'apprends sur le développement durable.</p>`,
         subcards: [
           {
-            title: "Complétude — depuis septembre 2026",
-            body: `<p>Professeur particulier pour des élèves de collège, de lycée et de l'enseignement supérieur.</p>`,
+            title: "Soutien scolaire · ODD 4",
+            body: `<p>Cours de maths, physique et chimie en famille depuis 2024 et chez Complétude depuis septembre 2026. Une manière concrète de contribuer à une <strong>éducation de qualité</strong>.</p>`,
           },
           {
-            title: "Cours en famille — depuis 2024",
-            body: `<p>Soutien scolaire pour des lycéens de ma famille.</p>`,
+            title: "BDE de l'ENSEEIHT",
+            body: `<p>Membre d'une liste candidate pour reprendre le bureau des élèves l'année prochaine.</p>`,
+          },
+          {
+            title: "TIPE · ODD 7, 11, 13",
+            body: `<p>Mon TIPE sur le <a href="#/project/tipe-bois-transparent">bois transparent</a> étudie un matériau biosourcé pour réduire les pertes de chaleur des bâtiments.</p>`,
+          },
+          {
+            title: "À venir cette année",
+            body: `<ul><li>Sulitest</li><li>Fresque du Climat</li><li>Journée Entrepreneuriat</li><li>Infographie d'équipe — projet d'engagement civique (janvier)</li></ul>`,
           },
         ],
       },
       en: {
-        nav: "Teaching",
-        title: "Teaching",
-        body: `
-          <p>
-            I enjoy explaining and helping others improve: I give private
-            lessons in <strong>mathematics, physics and chemistry</strong>.
-          </p>
-        `,
+        nav: "Sustainability",
+        title: "Sustainability & civic engagement",
+        body: `<p>What I do for others and what I'm learning about sustainable development.</p>`,
         subcards: [
           {
-            title: "Complétude — since September 2026",
-            body: `<p>Private tutor for middle school, high school and university students.</p>`,
+            title: "Tutoring · SDG 4",
+            body: `<p>Maths, physics and chemistry lessons for family members since 2024 and with Complétude since September 2026. A concrete way to support <strong>quality education</strong>.</p>`,
           },
           {
-            title: "Family tutoring — since 2024",
-            body: `<p>Academic support for high school students in my family.</p>`,
+            title: "ENSEEIHT student council",
+            body: `<p>Member of a team running to lead the student council (BDE) next year.</p>`,
+          },
+          {
+            title: "Research project · SDG 7, 11, 13",
+            body: `<p>My research project on <a href="#/project/tipe-bois-transparent">transparent wood</a> looks at a bio-based material that could reduce heat loss in buildings.</p>`,
+          },
+          {
+            title: "Coming up this year",
+            body: `<ul><li>Sulitest</li><li>Climate Fresk</li><li>Entrepreneurship Day</li><li>Team infographic — civic engagement proposal (January)</li></ul>`,
           },
         ],
       },
@@ -440,14 +447,87 @@ const PORTFOLIO = {
     {
       id: "sports",
       fr: {
-        nav: "Sports",
-        title: "Sports & autres activités",
-        body: `<p><strong>Water-polo</strong> pendant 10 ans, passionné par tout ce qui touche au sport, et <strong>musique</strong>. Langues : français (C2), espagnol (C1), anglais (B2+).</p>`,
+        nav: "Sport",
+        title: "Sport & autres activités",
+        body: `<p><strong>Water-polo</strong> pendant 10 ans : l'esprit d'équipe, l'endurance et la régularité. J'aime le sport en général, et la <strong>musique</strong>.</p><p>Langues : français (C2), espagnol (C1, origines péruviennes), anglais (B2+).</p>`,
       },
       en: {
         nav: "Sports",
-        title: "Sports & activities",
-        body: `<p><strong>Water polo</strong> for 10 years, passionate about all sports, and <strong>music</strong>. Languages: French (C2), Spanish (C1), English (B2+).</p>`,
+        title: "Sport & other activities",
+        body: `<p><strong>Water polo</strong> for 10 years, which taught me teamwork, endurance and consistency. I enjoy sport in general, and <strong>music</strong>.</p><p>Languages: French (C2), Spanish (C1, Peruvian heritage), English (B2+).</p>`,
+      },
+    },
+    {
+      id: "career",
+      fr: {
+        nav: "Projet pro",
+        title: "Projet professionnel",
+        body: `
+          <p>
+            Deux pistes m'attirent : la <strong>création de jeux vidéo</strong> et
+            l'<strong>entrepreneuriat</strong> (voir mon projet
+            <a href="#/project/stopeat">Stop'Eat</a>).
+          </p>
+          <div class="btn-row">
+            <a class="btn primary" href="assets/cv/CV_Mell_Riahi_FR.pdf" download>📄 CV (FR)</a>
+            <a class="btn" href="assets/cv/CV_Mell_Riahi_EN.pdf" download>📄 CV (EN)</a>
+            <a class="btn linkedin linkedin-link" href="https://www.linkedin.com/in/mell-riahi" target="_blank" rel="noopener">LinkedIn</a>
+            <a class="btn" href="#home">🎬 Elevator pitch</a>
+          </div>
+        `,
+        subcards: [
+          {
+            title: "Modèle n°1 — Jean-Emmanuel Faure",
+            body: `<p><strong>Fondateur de <a href="https://www.edf.fr/water-horizon-batterie-mobile-valorise-chaleur-perdue" target="_blank" rel="noopener">Water Horizon</a></strong> (Toulouse, 2017). Diplômé N7 en mécanique des fluides (2015).</p><p>Sa start-up fabrique des batteries thermiques mobiles qui récupèrent la chaleur perdue des usines. L'idée lui est venue en visitant une usine pendant ses études. Premiers prototypes faits chez lui, puis 18 M€ levés en 2025.</p><p><strong>Ce que j'en retiens :</strong> la persévérance. Il a commencé avec des prototypes bricolés chez lui et n'a jamais lâché son idée. Si on croit en son projet et qu'on continue malgré les difficultés, on peut aller très loin.</p><p class="small">→ Mobilité : États-Unis.</p>`,
+          },
+          {
+            title: "Modèle n°2 — Jean Muller",
+            body: `<p><strong>Fondateur de PassPassion</strong> (Toulouse, 2020). Diplômé N7 en électronique (1990).</p><p>Après une vingtaine d'années dans le secteur spatial, il crée à 52 ans une entreprise qui fait découvrir des métiers-passions à travers des stages : plus de 500 stages organisés en 2023.</p><p><strong>Ce que j'en retiens :</strong> il ne faut jamais abandonner ses rêves. Il a osé tout recommencer à 52 ans pour vivre de ce qui le passionne : il n'est jamais trop tard pour se lancer.</p><p class="small">→ Mobilité : Japon.</p>`,
+          },
+          {
+            title: "Modèle n°3 — Raymond Sarr",
+            body: `<p><strong>Fondateur de <a href="https://www.mondedesgrandesecoles.fr/jokosun-la-startup-qui-rend-lenergie-solaire-accessible-a-tous/" target="_blank" rel="noopener">Jokosun</a></strong> (2017). Ingénieur INP-ENSEEIHT.</p><p>Inspiré par ses racines sénégalaises, il a créé une entreprise qui apporte l'énergie solaire aux zones rurales du Sénégal : plus de 3 000 personnes ont eu accès à l'électricité.</p><p><strong>Ce que j'en retiens :</strong> tout le monde a sa chance de réussir, peu importe d'où il vient. Il a fait de ses racines une force, et ça me parle, avec ma famille péruvienne.</p><p class="small">→ Mobilité : Pérou.</p>`,
+          },
+          {
+            title: "Expérience",
+            body: `<ul><li><strong>Professeur particulier</strong>, Complétude — depuis sept. 2026</li><li><strong>Cours particuliers</strong> en famille — depuis 2024</li></ul>`,
+          },
+        ],
+      },
+      en: {
+        nav: "Career",
+        title: "Career development",
+        body: `
+          <p>
+            Two paths appeal to me: <strong>video game development</strong> and
+            <strong>entrepreneurship</strong> (see my
+            <a href="#/project/stopeat">Stop'Eat</a> project).
+          </p>
+          <div class="btn-row">
+            <a class="btn primary" href="assets/cv/CV_Mell_Riahi_EN.pdf" download>📄 CV (EN)</a>
+            <a class="btn" href="assets/cv/CV_Mell_Riahi_FR.pdf" download>📄 CV (FR)</a>
+            <a class="btn linkedin linkedin-link" href="https://www.linkedin.com/in/mell-riahi" target="_blank" rel="noopener">LinkedIn</a>
+            <a class="btn" href="#home">🎬 Elevator pitch</a>
+          </div>
+        `,
+        subcards: [
+          {
+            title: "Role model #1 — Jean-Emmanuel Faure",
+            body: `<p><strong>Founder of <a href="https://www.edf.fr/en/water-horizon-mobile-battery-recovers-waste-heat" target="_blank" rel="noopener">Water Horizon</a></strong> (Toulouse, 2017). ENSEEIHT graduate in fluid mechanics (2015).</p><p>His start-up builds mobile thermal batteries that recover waste heat from factories. The idea came from a factory visit during his studies. He built the first prototypes at home and raised €18M in 2025.</p><p><strong>What I take from him:</strong> perseverance. He started with prototypes built at home and never gave up on his idea. If you believe in your project and keep going when it gets hard, you can go a long way.</p><p class="small">→ Mobility: United States.</p>`,
+          },
+          {
+            title: "Role model #2 — Jean Muller",
+            body: `<p><strong>Founder of PassPassion</strong> (Toulouse, 2020). ENSEEIHT graduate in electronics (1990).</p><p>After about twenty years in the space industry, he started a company at 52 that lets people try out "passion" jobs through short placements: over 500 placements organised in 2023.</p><p><strong>What I take from him:</strong> never give up on your dreams. He dared to start over at 52 to live from what he loves: it's never too late to go for it.</p><p class="small">→ Mobility: Japan.</p>`,
+          },
+          {
+            title: "Role model #3 — Raymond Sarr",
+            body: `<p><strong>Founder of <a href="https://www.mondedesgrandesecoles.fr/jokosun-la-startup-qui-rend-lenergie-solaire-accessible-a-tous/" target="_blank" rel="noopener">Jokosun</a></strong> (2017). INP-ENSEEIHT engineer.</p><p>Driven by his Senegalese roots, he created a company that brings solar power to rural areas of Senegal: more than 3,000 people have gained access to electricity.</p><p><strong>What I take from him:</strong> everyone has a chance to succeed, wherever they come from. He turned his roots into a strength, and that speaks to me, with my Peruvian family.</p><p class="small">→ Mobility: Peru.</p>`,
+          },
+          {
+            title: "Experience",
+            body: `<ul><li><strong>Private tutor</strong>, Complétude — since Sept. 2026</li><li><strong>Private tutoring</strong> for family members — since 2024</li></ul>`,
+          },
+        ],
       },
     },
   ],
