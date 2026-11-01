@@ -18,7 +18,7 @@ const PORTFOLIO = {
   linkedin: "https://www.linkedin.com/in/mell-riahi",
 
   // Ta photo (carrée de préférence), ex. "assets/img/photo.jpg" — "" = initiales
-  photo: "",
+  photo: "assets/img/photo.jpg",
 
   // Dépose tes PDF dans assets/cv/
   cv: {
@@ -57,7 +57,7 @@ const PORTFOLIO = {
   // Dépose ta vidéo dans assets/video/ (ex. "assets/video/pitch.mp4")
   // Soit un lien YouTube (ex. "https://youtu.be/xxxx"), soit un fichier .mp4 dans src.
   pitchVideo: {
-    youtube: "https://youtu.be/ncDf65Q1PNg",
+    youtube: "https://youtu.be/vJgHoh0nWN0",
     src: "",
     poster: "",
   },
@@ -349,8 +349,9 @@ const PORTFOLIO = {
         title: "Mobilité internationale",
         body: `
           <p>
-            Ma famille vient du <strong>Pérou</strong> : j'ai grandi avec l'espagnol,
-            que je parle avec ma grand-mère. Partir à l'étranger fait partie de mon
+            Ma famille vient du <strong>Pérou</strong> et, du côté de mon père, de
+            <strong>Tunisie</strong> : j'ai grandi avec l'espagnol, que je parle avec
+            ma grand-mère, et j'ai quelques notions d'arabe. Partir à l'étranger fait partie de mon
             projet. Voici trois projets de mobilité, chacun lié à un de mes
             <a href="#career">modèles professionnels</a> :
           </p>
@@ -375,8 +376,9 @@ const PORTFOLIO = {
         title: "International mobility",
         body: `
           <p>
-            My family comes from <strong>Peru</strong>: I grew up speaking Spanish,
-            which I still speak with my grandmother. Going abroad is part of my
+            My family comes from <strong>Peru</strong> and, on my father's side, from
+            <strong>Tunisia</strong>: I grew up speaking Spanish, which I still speak
+            with my grandmother, and I know a little Arabic. Going abroad is part of my
             plan. Here are three mobility projects, each linked to one of my
             <a href="#career">role models</a>:
           </p>
@@ -451,12 +453,12 @@ const PORTFOLIO = {
       fr: {
         nav: "Sport",
         title: "Sport & autres activités",
-        body: `<p><strong>Water-polo</strong> pendant 10 ans : l'esprit d'équipe, l'endurance et la régularité. J'aime le sport en général, et la <strong>musique</strong>.</p><p>Langues : français (C2), espagnol (C1, origines péruviennes), anglais (B2+).</p>`,
+        body: `<p><strong>Water-polo</strong> pendant 10 ans : l'esprit d'équipe, l'endurance et la régularité. J'aime le sport en général, et la <strong>musique</strong>.</p><p>Langues : français (C2), espagnol (C1, origines péruviennes), anglais (B2+), arabe (notions, origines tunisiennes).</p>`,
       },
       en: {
         nav: "Sports",
         title: "Sport & other activities",
-        body: `<p><strong>Water polo</strong> for 10 years, which taught me teamwork, endurance and consistency. I enjoy sport in general, and <strong>music</strong>.</p><p>Languages: French (C2), Spanish (C1, Peruvian heritage), English (B2+).</p>`,
+        body: `<p><strong>Water polo</strong> for 10 years, which taught me teamwork, endurance and consistency. I enjoy sport in general, and <strong>music</strong>.</p><p>Languages: French (C2), Spanish (C1, Peruvian heritage), English (B2+), Arabic (basic, Tunisian heritage).</p>`,
       },
     },
     {
@@ -488,7 +490,7 @@ const PORTFOLIO = {
           },
           {
             title: "Modèle n°3 — Raymond Sarr",
-            body: `<p><strong>Fondateur de <a href="https://www.mondedesgrandesecoles.fr/jokosun-la-startup-qui-rend-lenergie-solaire-accessible-a-tous/" target="_blank" rel="noopener">Jokosun</a></strong> (2017). Ingénieur INP-ENSEEIHT.</p><p>Inspiré par ses racines sénégalaises, il a créé une entreprise qui apporte l'énergie solaire aux zones rurales du Sénégal : plus de 3 000 personnes ont eu accès à l'électricité.</p><p><strong>Ce que j'en retiens :</strong> tout le monde a sa chance de réussir, peu importe d'où il vient. Il a fait de ses racines une force, et ça me parle, avec ma famille péruvienne.</p><p class="small">→ Mobilité : Pérou.</p>`,
+            body: `<p><strong>Fondateur de <a href="https://www.mondedesgrandesecoles.fr/jokosun-la-startup-qui-rend-lenergie-solaire-accessible-a-tous/" target="_blank" rel="noopener">Jokosun</a></strong> (2017). Ingénieur INP-ENSEEIHT.</p><p>Inspiré par ses racines sénégalaises, il a créé une entreprise qui apporte l'énergie solaire aux zones rurales du Sénégal : plus de 3 000 personnes ont eu accès à l'électricité.</p><p><strong>Ce que j'en retiens :</strong> tout le monde a sa chance de réussir, peu importe d'où il vient. Il a fait de ses racines une force, et ça me parle, avec mes origines péruviennes et tunisiennes.</p><p class="small">→ Mobilité : Pérou.</p>`,
           },
           {
             title: "Expérience",
@@ -523,7 +525,7 @@ const PORTFOLIO = {
           },
           {
             title: "Role model #3 — Raymond Sarr",
-            body: `<p><strong>Founder of <a href="https://www.mondedesgrandesecoles.fr/jokosun-la-startup-qui-rend-lenergie-solaire-accessible-a-tous/" target="_blank" rel="noopener">Jokosun</a></strong> (2017). INP-ENSEEIHT engineer.</p><p>Driven by his Senegalese roots, he created a company that brings solar power to rural areas of Senegal: more than 3,000 people have gained access to electricity.</p><p><strong>What I take from him:</strong> everyone has a chance to succeed, wherever they come from. He turned his roots into a strength, and that speaks to me, with my Peruvian family.</p><p class="small">→ Mobility: Peru.</p>`,
+            body: `<p><strong>Founder of <a href="https://www.mondedesgrandesecoles.fr/jokosun-la-startup-qui-rend-lenergie-solaire-accessible-a-tous/" target="_blank" rel="noopener">Jokosun</a></strong> (2017). INP-ENSEEIHT engineer.</p><p>Driven by his Senegalese roots, he created a company that brings solar power to rural areas of Senegal: more than 3,000 people have gained access to electricity.</p><p><strong>What I take from him:</strong> everyone has a chance to succeed, wherever they come from. He turned his roots into a strength, and that speaks to me, with my Peruvian and Tunisian roots.</p><p class="small">→ Mobility: Peru.</p>`,
           },
           {
             title: "Experience",
