@@ -376,6 +376,7 @@ footer {
   border-radius: 14px;
   background: var(--elev);
   object-fit: contain;
+  border: 0;
 }
 
 /* Frise académique. */

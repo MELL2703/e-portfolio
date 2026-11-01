@@ -55,7 +55,9 @@ const PORTFOLIO = {
   },
 
   // Dépose ta vidéo dans assets/video/ (ex. "assets/video/pitch.mp4")
+  // Soit un lien YouTube (ex. "https://youtu.be/xxxx"), soit un fichier .mp4 dans src.
   pitchVideo: {
+    youtube: "",
     src: "",
     poster: "",
   },
