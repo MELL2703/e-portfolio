@@ -55,7 +55,9 @@ const PORTFOLIO = {
   },
 
   // Dépose ta vidéo dans assets/video/ (ex. "assets/video/pitch.mp4")
+  // Soit un lien YouTube (ex. "https://youtu.be/xxxx"), soit un fichier .mp4 dans src.
   pitchVideo: {
+    youtube: "https://youtu.be/ncDf65Q1PNg",
     src: "",
     poster: "",
   },
@@ -112,11 +114,11 @@ const PORTFOLIO = {
   courses: {
     fr: {
       title: "ENSEEIHT — Sciences du Numérique (1<sup>re</sup> année)",
-      body: `<p>Programmation (Python, Ada), mathématiques et informatique fondamentale.</p>`,
+      body: `<p>Programmation, fonctionnement des ordinateurs et mathématiques.</p>`,
     },
     en: {
       title: "ENSEEIHT — Digital Sciences (Year 1)",
-      body: `<p>Programming (Python, Ada), mathematics and computer science fundamentals.</p>`,
+      body: `<p>Programming, how computers work, and mathematics.</p>`,
     },
   },
 

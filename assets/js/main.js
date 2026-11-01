@@ -216,8 +216,24 @@
     `;
   }
 
+  // Identifiant d'une vidéo YouTube, quel que soit le format du lien.
+  function youtubeId(url) {
+    const match = (url || "").match(
+      /(?:youtu\.be\/|v=|embed\/|shorts\/)([\w-]{11})/,
+    );
+    return match ? match[1] : "";
+  }
+
   function pitchVideoHTML(lang) {
-    const { src, poster } = P.pitchVideo;
+    const { src, poster, youtube } = P.pitchVideo;
+    const id = youtubeId(youtube);
+    if (id) {
+      return `
+        <iframe class="pitch-video" src="https://www.youtube-nocookie.com/embed/${id}"
+                title="Elevator pitch" loading="lazy" allowfullscreen
+                allow="accelerometer; encrypted-media; gyroscope; picture-in-picture"></iframe>
+      `;
+    }
     if (!src) {
       return `<div class="empty-slot">${i18n[lang].videoEmpty}</div>`;
     }
