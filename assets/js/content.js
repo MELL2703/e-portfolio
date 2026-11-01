@@ -18,7 +18,7 @@ const PORTFOLIO = {
   linkedin: "https://www.linkedin.com/in/mell-riahi",
 
   // Ta photo (carrée de préférence), ex. "assets/img/photo.jpg" — "" = initiales
-  photo: "",
+  photo: "assets/img/photo.jpg",
 
   // Dépose tes PDF dans assets/cv/
   cv: {
